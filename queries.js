@@ -19,6 +19,12 @@ var queries = {
           "value": adn.rs601338.genotype == 'AA'
         }
     },
+    lactose: function(adn) {
+        return {
+            "description":"Are you lactose intolerant?",
+            "value":adn.rs4988235.genotype == 'CC'
+        }
+    },
     gendermale: function(adn){
         var isMale = gql.atLeast(2, [
           gql.exact('rs2032651', 'D'),
